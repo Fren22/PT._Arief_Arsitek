@@ -982,82 +982,96 @@ if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
   <img id="lightboxImg" src="" alt="preview">
 </div>
 
+<!-- ======== VIDEO KEGIATAN PROYEK ======== -->
   <section id="Videos"section></section>
-  <section id="tiktok-videos" style="padding:80px 20px; text-align:center;">
-  <h2 style="margin-bottom:40px;">Video kegiatan proyek</h2>
+<section id="tiktok-videos" style="background:#111; color:#fff; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2rem; font-weight:700; margin-bottom:40px; position:relative;">
+    Video kegiatan proyek
+    <span style="display:block; width:70px; height:3px; background:#d6a827; margin:15px auto 0;"></span>
+  </h2>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1000px;margin:auto;">
-
-    <!-- Videos TikTok 1 -->
+  <div class="tiktok-grid">
+    <!-- Video TikTok 1 -->
     <blockquote class="tiktok-embed"
       cite="https://www.tiktok.com/@pt.arief.arsitek/video/7547535193880530196"
       data-video-id="7547535193880530196"
-      style="max-width: 100%;min-width: 250px;">
-      <section>
-        <a target="_blank" title="@pt.arief.arsitek" href="https://www.tiktok.com/@pt.arief.arsitek?refer=embed">@pt.arief.arsitek</a>
-        📍 Survey SLF – Tentrem Karoseri Tim PT Arief Arsitek melakukan survey lapangan sebagai bagian dari proses Sertifikat Laik Fungsi (SLF).
-      </section>
+      style="max-width:400px;min-width:250px;margin:auto;">
     </blockquote>
 
     <!-- Video TikTok 2 -->
     <blockquote class="tiktok-embed"
       cite="https://www.tiktok.com/@pt.arief.arsitek/video/7547537067719265554"
       data-video-id="7547537067719265554"
-      style="max-width: 100%;min-width: 250px;">
-      <section>
-        <a target="_blank" title="@pt.arief.arsitek" href="https://www.tiktok.com/@pt.arief.arsitek?refer=embed">@pt.arief.arsitek</a>
-        Contoh video lain dari proyek arsitektur kami.
-      </section>
+      style="max-width:400px;min-width:250px;margin:auto;">
     </blockquote>
 
     <!-- Video TikTok 3 -->
     <blockquote class="tiktok-embed"
       cite="https://www.tiktok.com/@pt.arief.arsitek/video/7561299105562168597"
       data-video-id="7561299105562168597"
-      style="max-width: 100%;min-width: 250px;">
-      <section>
-        <a target="_blank" title="@pt.arief.arsitek" href="https://www.tiktok.com/@pt.arief.arsitek?refer=embed">@pt.arief.arsitek</a>
-        Dokumentasi video proyek lainnya oleh tim kami.
-      </section>
+      style="max-width:400px;min-width:250px;margin:auto;">
     </blockquote>
-
-    <!-- Video TikTok 4 -->
-    <blockquote class="tiktok-embed"
-      cite="https://www.tiktok.com/@pt.arief.arsitek/video/7540206129142451476"
-      data-video-id="7540206129142451476"
-      style="max-width: 100%;min-width: 250px;">
-      <section>
-        <a target="_blank" title="@pt.arief.arsitek" href="https://www.tiktok.com/@pt.arief.arsitek?refer=embed">@pt.arief.arsitek</a>
-        Dokumentasi video proyek lainnya oleh tim kami.
-      </section>
-    </blockquote>
-
-    <!-- Video TikTok 5 -->
-    <blockquote class="tiktok-embed"
-      cite="https://www.tiktok.com/@pt.arief.arsitek/video/7538695242824846593"
-      data-video-id="7538695242824846593"
-      style="max-width: 100%;min-width: 250px;">
-      <section>
-        <a target="_blank" title="@pt.arief.arsitek" href="https://www.tiktok.com/@pt.arief.arsitek?refer=embed">@pt.arief.arsitek</a>
-        Dokumentasi video proyek lainnya oleh tim kami.
-      </section>
-    </blockquote>
-
-    <!-- Video TikTok 6 -->
-    <blockquote class="tiktok-embed"
-      cite="https://www.tiktok.com/@pt.arief.arsitek/video/7527605870608403733"
-      data-video-id="7527605870608403733"
-      style="max-width: 100%;min-width: 250px;">
-      <section>
-        <a target="_blank" title="@pt.arief.arsitek" href="https://www.tiktok.com/@pt.arief.arsitek?refer=embed">@pt.arief.arsitek</a>
-        Dokumentasi video proyek lainnya oleh tim kami.
-      </section>
-    </blockquote>
-
   </div>
 </section>
 
 <script async src="https://www.tiktok.com/embed.js"></script>
+
+<style>
+/* ===== Styling TikTok Grid ===== */
+.tiktok-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TikTok Responsif di HP */
+@media (max-width: 600px) {
+  #tiktok-videos {
+    padding: 50px 10px !important;
+  }
+
+  #tiktok-videos h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 25px !important;
+  }
+
+  .tiktok-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .tiktok-embed {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #000 !important;
+  }
+}
+</style>
+
+<script>
+/* ===== Reload TikTok Embed di HP agar tampil ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+  if (isMobile) {
+    // pastikan script embed TikTok di-reload di perangkat HP
+    const oldScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
+    if (oldScript) {
+      const newScript = document.createElement("script");
+      newScript.src = "https://www.tiktok.com/embed.js";
+      newScript.async = true;
+      document.body.appendChild(newScript);
+    }
+  }
+});
+</script>
+
 
 
   <style>
