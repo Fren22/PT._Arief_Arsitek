@@ -664,43 +664,49 @@ if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
 </style>
 
 <style>
-/* ==== FIX TAMPILAN VIDEO TIKTOK DI HP ==== */
+/* ==== FIX & PERPANJANG TAMPILAN VIDEO TIKTOK DI HP ==== */
 @media (max-width: 768px) {
-  /* Pastikan section punya ruang cukup */
+  /* Section TikTok tetap responsif */
   #tiktok-videos {
     padding: 50px 10px !important;
     background: #111 !important;
     overflow: visible !important;
   }
 
-  /* Grid jadi column agar tinggi ikut konten */
+  /* Layout kolom fleksibel */
   #tiktok-videos .tiktok-grid {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 25px !important;
+    gap: 30px !important;
   }
 
-  /* Biar iframe TikTok muncul sempurna */
+  /* Perbesar tinggi video TikTok di HP */
   #tiktok-videos .tiktok-embed {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 280px !important;
-    height: auto !important;
+    height: 600px !important; /* 💡 Tinggi diperpanjang dari default */
     overflow: visible !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: scale(1) !important;
-    background: transparent !important;
+    border-radius: 12px !important;
+    background: #000 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   }
 
-  /* Kadang TikTok kasih iframe di dalam div */
+  /* Pastikan iframe-nya menyesuaikan juga */
   #tiktok-videos iframe {
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
+    border-radius: 12px !important;
     display: block !important;
     opacity: 1 !important;
+  }
+
+  /* Judul di HP sedikit lebih kecil biar seimbang */
+  #tiktok-videos h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 30px !important;
   }
 }
 </style>
