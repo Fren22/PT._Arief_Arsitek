@@ -603,6 +603,81 @@ header img {
 }
 </style>
 
+<style>
+/* ==== Perbaikan tampilan video TikTok untuk HP ==== */
+@media (max-width: 600px) {
+  #tiktok-videos {
+    padding: 50px 10px !important;
+  }
+
+  #tiktok-videos h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 25px !important;
+  }
+
+  /* Biar grid TikTok lebih rapat dan pas di HP */
+  #tiktok-videos > div {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-items: center !important;
+  }
+
+  /* Biar video TikTok pas 100% lebar layar HP */
+  .tiktok-embed {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+  }
+}
+</style>
+
+<style>
+/* ==== Perbaikan tampilan video TikTok untuk HP ==== */
+@media (max-width: 600px) {
+  #tiktok-videos {
+    padding: 50px 10px !important;
+  }
+
+  #tiktok-videos h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 25px !important;
+  }
+
+  #tiktok-videos > div {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-items: center !important;
+  }
+
+  .tiktok-embed {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+  }
+}
+
+/* ==== Hilangkan efek kursor di HP ==== */
+@media (max-width: 768px) {
+  body {
+    cursor: default !important;
+  }
+
+  /* Jika kamu punya elemen kursor custom, sembunyikan di HP */
+  #custom-cursor, 
+  .cursor, 
+  .cursor-dot, 
+  .cursor-outline {
+    display: none !important;
+  }
+}
+</style>
+
   </style>
 </head>
 
