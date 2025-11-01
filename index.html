@@ -9,37 +9,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- === CUSTOM CURSOR SEKOP (POSISI KIRI ATAS — FINAL FIX) === -->
+<!-- === CUSTOM CURSOR SEKOP (POSISI KIRI ATAS — FINAL FIX) === -->
 <style>
-  /* Sembunyikan kursor asli */
+  /* Default: kursor normal di semua perangkat */
   * {
-    cursor: none !important;
+    cursor: auto;
   }
 
-  /* Ikon sekop mengikuti mouse */
-  .sekop-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 28px;  /* ukuran kecil biar pas */
-    height: 28px;
-    transform: rotate(135deg); /* posisi miring ke kiri atas ↖️ */
-    pointer-events: none;
-    z-index: 9999;
-    user-select: none;
-    transition: transform 0.08s ease-out;
+  /* === Cursor Sekop hanya tampil di Laptop/PC === */
+  @media (min-width: 769px) {
+    /* Sembunyikan kursor asli dan tampilkan sekop */
+    * {
+      cursor: none !important;
+    }
+
+    .sekop-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 28px;  /* ukuran kecil biar pas */
+      height: 28px;
+      transform: rotate(135deg); /* miring ke kiri atas ↖️ */
+      pointer-events: none;
+      z-index: 9999;
+      user-select: none;
+      transition: transform 0.08s ease-out;
+      display: block !important;
+    }
+
+    /* Efek hover di laptop/PC */
+    a:hover ~ .sekop-cursor,
+    button:hover ~ .sekop-cursor,
+    input:hover ~ .sekop-cursor {
+      transform: rotate(135deg) scale(1.2);
+    }
   }
 
-  /* Saat hover tombol atau link */
-  a:hover ~ .sekop-cursor,
-  button:hover ~ .sekop-cursor,
-  input:hover ~ .sekop-cursor {
-    transform: rotate(135deg) scale(1.2);
+  /* === Di HP/tablet: sembunyikan cursor sekop === */
+  @media (max-width: 768px) {
+    .sekop-cursor {
+      display: none !important;
+    }
   }
 </style>
 
 <!-- Gambar sekop -->
 <img src="img2/ikon.png" alt="Sekop Cursor" class="sekop-cursor">
+
 
 <script>
   const sekop = document.querySelector('.sekop-cursor');
